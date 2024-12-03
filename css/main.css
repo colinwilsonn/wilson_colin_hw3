@@ -1,0 +1,92 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    color: #2a7ae2;
+    margin: 0;
+}
+
+header h2 {
+    color: #555;
+    margin: 0;
+}
+
+.paper-background {
+    background-image: url('../images/paper-background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+main {
+    padding: 20px;
+}
+
+section h3 {
+    color: #2a7ae2;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Styling for In-Progress Items */
+.in-progress input[type="checkbox"]:checked + label {
+    color: #ffa500;
+    text-decoration: line-through;
+}
+
+.in-progress input[type="checkbox"]:checked + label::after {
+    content: " (In Progress)";
+    color: #ffa500;
+    font-weight: bold;
+}
+
+/* Styling for Done Items */
+.done input[type="checkbox"]:checked + label {
+    color: #28a745;
+    text-decoration: line-through;
+}
+
+.done input[type="checkbox"]:checked + label::after {
+    content: " ✔";
+    color: #28a745;
+    font-weight: bold;
+}
